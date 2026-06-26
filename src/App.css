@@ -1,0 +1,141 @@
+/* App.css - add these variables at the very top */
+:root {
+  --accent: #aa3bff;
+  --text: white;
+}
+
+/* Rest of your existing App.css stays the same */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: white;
+}
+/* Add to App.css */
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.movie-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Pulse animation for buttons */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+button:active {
+  animation: pulse 0.2s ease-in-out;
+}
+
+/* Shimmer loading effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Slide-in from left */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+nav {
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Rotate animation for favorite button */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.favorite-btn:hover {
+  animation: rotate 0.5s ease-in-out;
+}
+/* Update your existing CSS */
+.movie-card {
+  background: #222;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 200px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  padding: 8px 12px;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 250px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+
+input:focus {
+  outline: none;
+  border-color: #aa3bff;
+  box-shadow: 0 0 0 3px rgba(170, 59, 255, 0.2);
+  transform: scale(1.02);
+}
