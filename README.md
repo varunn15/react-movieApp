@@ -6,7 +6,7 @@ Explore movies, watch trailers, and manage your personal favorites with authenti
 ---
 
 ## 🚀 Live Demo  
-👉 https://your-live-link.vercel.app  
+👉 (https://moviee-react.vercel.app/)
 
 ---
 
